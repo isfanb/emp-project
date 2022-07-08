@@ -1,0 +1,100 @@
+<div class="col-lg-10 col-md-10 col-sm-12 m-auto">
+    <nav class="navbar bg-light d-flex justify-content-between">
+          <a class="navbar-brand mx-3">Employee List</a>
+          <div>
+            <button type="button" class="btn btn-primary mx-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Add Employee
+            </button>
+            <a routerLink="/login" type="submit" class="btn btn-success mx-3">
+                Logout
+          </a>
+          </div>
+    </nav>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Employee Details</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" [formGroup]="formValue">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Username</label>
+                    <input type="text" class="form-control" formControlName="username" id="exampleFormControlInput1">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">First Name</label>
+                    <input type="text" class="form-control" formControlName="firstName" id="exampleFormControlInput1">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" formControlName="lastName" id="exampleFormControlInput1">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email</label>
+                    <input type="email" class="form-control" formControlName="email" id="exampleFormControlInput1">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Birth Date</label>
+                    <input type="datetime" class="form-control" formControlName="birthDate" id="exampleFormControlInput1">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Basic Salary</label>
+                    <input type="number" class="form-control" formControlName="basicSalary" id="exampleFormControlInput1">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Status</label>
+                    <input type="text" class="form-control" formControlName="status" id="exampleFormControlInput1">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Group</label>
+                    <input type="text" class="form-control" formControlName="group" id="exampleFormControlInput1">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Description</label>
+                    <input type="datetime" class="form-control" formControlName="description" id="exampleFormControlInput1">
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" (click)="postEmpData()">Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Username</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Birth Date</th>
+            <th scope="col">Basic Salary</th>
+            <th scope="col">Status</th>
+            <th scope="col">Group</th>
+            <th scope="col">Description</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let emp of getEmpDataFull">
+            <td>{{emp.username}}</td>
+            <td>{{emp.firstName}}</td>
+            <td>{{emp.lastName}}</td>
+            <td>{{emp.email}}</td>
+            <td>{{emp.birthDate}}</td>
+            <td>{{emp.basicSalary}}</td>
+            <td>{{emp.status}}</td>
+            <td>{{emp.group}}</td>
+            <td>{{emp.description}}</td>
+            <td>
+                <button class="btn btn-warning mx-2">Edit</button>
+                <button class="btn btn-danger">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>

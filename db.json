@@ -1,0 +1,133 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "username": "adas",
+      "firstName": "gfgdgd",
+      "lastName": "hghgh",
+      "email": "nanana@mal.co",
+      "birthDate": "w1212",
+      "basicSalary": 34445555,
+      "status": "sdsf",
+      "group": "fsfdfd",
+      "description": "asdfsfs",
+      "id": 2
+    },
+    {
+      "username": "fdsfs",
+      "firstName": "fdsfs",
+      "lastName": "erer",
+      "email": "dsfsfsra@gmail.com",
+      "birthDate": "12fdf454",
+      "basicSalary": 5555,
+      "status": "fgdg",
+      "group": "gdf",
+      "description": "gfgfgf",
+      "id": 3
+    },
+    {
+      "username": "fdsfdsf",
+      "firstName": "fsfdf",
+      "lastName": "fsfsf",
+      "email": "fsfds@fdgfd",
+      "birthDate": "dsfdsfs",
+      "basicSalary": 32323,
+      "status": "dsfds",
+      "group": "cvcxvcx",
+      "description": "fdsfdsf",
+      "id": 4
+    },
+    {
+      "username": "ranasanar",
+      "firstName": "Rana",
+      "lastName": "Priandiri",
+      "email": "ranapriandiri@navmail.us",
+      "birthDate": "22-09-1998",
+      "basicSalary": 6000000,
+      "status": "Staff",
+      "group": "ANSK",
+      "description": "-",
+      "id": 5
+    },
+    {
+      "username": "lalasalial",
+      "firstName": "Lisa",
+      "lastName": "Nana",
+      "email": "lisanana@mail.com",
+      "birthDate": "11-08-1889",
+      "basicSalary": 1000000,
+      "status": "Staff",
+      "group": "MKNS",
+      "description": "-",
+      "id": 6
+    },
+    {
+      "username": "mahaka",
+      "firstName": "maha",
+      "lastName": "kanaya",
+      "email": "mahaka@mai.us",
+      "birthDate": "01-01-2001",
+      "basicSalary": 6000000,
+      "status": "Staff",
+      "group": "MKSH",
+      "description": "-",
+      "id": 7
+    },
+    {
+      "username": "inayah",
+      "firstName": "Inayah ",
+      "lastName": "Abshari",
+      "email": "inayah@mail.us",
+      "birthDate": "23-01-1999",
+      "basicSalary": 1000000,
+      "status": "Staff",
+      "group": "MKSH",
+      "description": "-",
+      "id": 8
+    }
+  ],
+  "signup": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "fullname": "",
+      "email": "",
+      "password": "",
+      "id": 2
+    },
+    {
+      "fullname": "",
+      "email": "",
+      "password": "",
+      "id": 3
+    },
+    {
+      "fullname": "",
+      "email": "",
+      "password": "",
+      "id": 4
+    },
+    {
+      "fullname": "ray ahmad",
+      "email": "ray@mail.co",
+      "password": "ray",
+      "id": 5
+    },
+    {
+      "fullname": "ray ahmad",
+      "email": "ray@mail.co",
+      "password": "ray",
+      "id": 6
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
