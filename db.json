@@ -1,47 +1,6 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    },
-    {
-      "username": "adas",
-      "firstName": "gfgdgd",
-      "lastName": "hghgh",
-      "email": "nanana@mal.co",
-      "birthDate": "w1212",
-      "basicSalary": 34445555,
-      "status": "sdsf",
-      "group": "fsfdfd",
-      "description": "asdfsfs",
-      "id": 2
-    },
-    {
-      "username": "fdsfs",
-      "firstName": "fdsfs",
-      "lastName": "erer",
-      "email": "dsfsfsra@gmail.com",
-      "birthDate": "12fdf454",
-      "basicSalary": 5555,
-      "status": "fgdg",
-      "group": "gdf",
-      "description": "gfgfgf",
-      "id": 3
-    },
-    {
-      "username": "fdsfdsf",
-      "firstName": "fsfdf",
-      "lastName": "fsfsf",
-      "email": "fsfds@fdgfd",
-      "birthDate": "dsfdsfs",
-      "basicSalary": 32323,
-      "status": "dsfds",
-      "group": "cvcxvcx",
-      "description": "fdsfdsf",
-      "id": 4
-    },
-    {
       "username": "ranasanar",
       "firstName": "Rana",
       "lastName": "Priandiri",
@@ -88,6 +47,102 @@
       "group": "MKSH",
       "description": "-",
       "id": 8
+    },
+    {
+      "username": "ruthshe",
+      "firstName": "ruth",
+      "lastName": "silalahi",
+      "email": "ruthshe@mail.us",
+      "birthDate": "2009-06-23",
+      "basicSalary": 1000000,
+      "status": "Staff",
+      "group": "3",
+      "description": "2022-07-01",
+      "id": 9
+    },
+    {
+      "username": "arbok",
+      "firstName": "arash",
+      "lastName": "boksani",
+      "email": "arbok@mail.co",
+      "birthDate": "1999-04-03",
+      "basicSalary": 4000000,
+      "status": "Staff",
+      "group": "Sembilan",
+      "description": "2022-07-13",
+      "id": 10
+    },
+    {
+      "username": "adsum",
+      "firstName": "adam",
+      "lastName": "supratman",
+      "email": "adsum@mail.co",
+      "birthDate": "1998-03-03",
+      "basicSalary": 5000000,
+      "status": "Staff",
+      "group": "Dua",
+      "description": "2022-07-28",
+      "id": 11
+    },
+    {
+      "username": "putsus",
+      "firstName": "putri",
+      "lastName": "susanti",
+      "email": "putsus@mail.us",
+      "birthDate": "1990-05-06",
+      "basicSalary": 8000000,
+      "status": "Staff",
+      "group": "Enam",
+      "description": "2022-07-13",
+      "id": 12
+    },
+    {
+      "username": "irlest",
+      "firstName": "ira",
+      "lastName": "lestari",
+      "email": "irlest@mail.us",
+      "birthDate": "1997-08-12",
+      "basicSalary": 1000000,
+      "status": "Staff",
+      "group": "Empat",
+      "description": "2022-07-13",
+      "id": 13
+    },
+    {
+      "username": "rinoks",
+      "firstName": "rina",
+      "lastName": "oktavia",
+      "email": "rinoks@mail.co",
+      "birthDate": "1990-03-13",
+      "basicSalary": 4000000,
+      "status": "Staff",
+      "group": "Satu",
+      "description": "2022-07-12",
+      "id": 14
+    },
+    {
+      "username": "sarfath",
+      "firstName": "sari",
+      "lastName": "fatimah",
+      "email": "sarfath@mail.co",
+      "birthDate": "2000-03-23",
+      "basicSalary": 2000000,
+      "status": "Staff",
+      "group": "Lima",
+      "description": "2022-07-13",
+      "id": 15
+    },
+    {
+      "username": "tonysupto",
+      "firstName": "tony",
+      "lastName": "sujipto",
+      "email": "tonsysupto@mail.us",
+      "birthDate": "1990-01-20",
+      "basicSalary": 6000000,
+      "status": "Staff",
+      "group": "Empat",
+      "description": "2022-07-29",
+      "id": 16
     }
   ],
   "signup": [

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { map, Observable } from 'rxjs';
+import { map} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +17,12 @@ export class EmpDataService {
   }
   getData() {
     return this._http.get<any>(`http://localhost:3000/posts`)
+    .pipe(map((res:any) => {
+      return res;
+    }))
+  }
+  getSingleData(id: number) {
+    return this._http.get<any>(`http://localhost:3000/posts/${id}`)
     .pipe(map((res:any) => {
       return res;
     }))

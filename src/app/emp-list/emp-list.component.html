@@ -1,8 +1,8 @@
-<div class="col-lg-10 col-md-10 col-sm-12 m-auto">
+<div class="col-lg-12 col-md-10 col-sm-12 m-auto">
     <nav class="navbar bg-light d-flex justify-content-between">
           <a class="navbar-brand mx-3">Employee List</a>
           <div>
-            <button type="button" class="btn btn-primary mx-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" class="btn btn-primary mx-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Add Employee
             </button>
             <a routerLink="/login" type="submit" class="btn btn-success mx-3">
@@ -15,7 +15,7 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Employee Details</h5>
+              <h5 class="modal-title" id="exampleModalLabel">Employee Data</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body" [formGroup]="formValue">
@@ -37,7 +37,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Birth Date</label>
-                    <input type="datetime" class="form-control" formControlName="birthDate" id="exampleFormControlInput1">
+                    <input type="date" class="form-control" formControlName="birthDate" id="exampleFormControlInput1">
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Basic Salary</label>
@@ -49,24 +49,39 @@
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Group</label>
-                    <input type="text" class="form-control" formControlName="group" id="exampleFormControlInput1">
+                    <select class="form-control" formControlName="group" id="exampleFormControlInput1">
+                      <option>Satu</option>
+                      <option>Dua</option>
+                      <option>Tiga</option>
+                      <option>Empat</option>
+                      <option>Lima</option>
+                      <option>Enam</option>
+                      <option>Tujuh</option>
+                      <option>Delapan</option>
+                      <option>Sembilan</option>
+                      <option>Sepuluh</option>
+                    </select>
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Description</label>
-                    <input type="datetime" class="form-control" formControlName="description" id="exampleFormControlInput1">
+                    <input type="date" class="form-control" formControlName="description" id="exampleFormControlInput1">
                 </div>
             </div>
             <div class="modal-footer">
-              <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary" (click)="postEmpData()">Add</button>
+              <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary" [disabled]="!formValue.valid" (click)="postEmpData()">Save</button>
             </div>
           </div>
         </div>
       </div>
 
+      <div class="my-3">
+        <input type="email" class="form-control" [(ngModel)]="filterTerm" placeholder="search by name">
+      </div>
     <table class="table table-striped">
         <thead>
           <tr>
+            <th scope="col">#</th>
             <th scope="col">Username</th>
             <th scope="col">First Name</th>
             <th scope="col">Last Name</th>
@@ -80,21 +95,24 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let emp of getEmpDataFull">
+          <tr *ngFor="let emp of getEmpDataFull | filter: filterTerm | paginate: { itemsPerPage: 5, currentPage: page }">
+            <td>{{emp.id}}</td>
             <td>{{emp.username}}</td>
             <td>{{emp.firstName}}</td>
             <td>{{emp.lastName}}</td>
             <td>{{emp.email}}</td>
             <td>{{emp.birthDate}}</td>
-            <td>{{emp.basicSalary}}</td>
+            <td>{{emp.basicSalary | currency:'IDR':'symbol'}}</td>
             <td>{{emp.status}}</td>
             <td>{{emp.group}}</td>
             <td>{{emp.description}}</td>
             <td>
-                <button class="btn btn-warning mx-2">Edit</button>
-                <button class="btn btn-danger">Delete</button>
+              <button class="btn btn-success mx-2" routerLink="/employee-detail/{{emp.id}}">View</button>
+              <button class="btn btn-warning mx-2">Edit</button>
+              <button class="btn btn-danger">Delete</button>
             </td>
           </tr>
         </tbody>
       </table>
+      <pagination-controls class="text-center" (pageChange)="page = $event"></pagination-controls>
 </div>

@@ -1,6 +1,6 @@
 import { EmpDataService } from './../emp-data.service';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { Interface } from './emp-interface';
 
 @Component({
@@ -10,6 +10,10 @@ import { Interface } from './emp-interface';
 })
 export class EmpListComponent implements OnInit {
 
+  id !: number ;
+  detailEmp !: any;
+  page : number = 1
+  filterTerm !: string;
   formValue !: FormGroup;
   getEmpDataFull !: any;
   empDataObject : Interface = new Interface();
@@ -20,15 +24,15 @@ export class EmpListComponent implements OnInit {
 
   ngOnInit(): void {
     this.formValue = this._formBuilder.group({
-      username: [''],
-      firstName: [''],
-      lastName: [''],
-      email: [''],
-      birthDate: [''],
-      basicSalary: [''],
-      status: [''],
-      group: [''],
-      description: ['']
+      username: ['', Validators.required],
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      email: ['', Validators.required],
+      birthDate: ['', Validators.required],
+      basicSalary: ['', Validators.required],
+      status: ['', Validators.required],
+      group: ['', Validators.required],
+      description: ['', Validators.required]
     })
 
     this.getEmpData();
@@ -47,14 +51,14 @@ export class EmpListComponent implements OnInit {
     
     this._empData.postData(this.empDataObject).subscribe(res => {
       console.log(res)
-      alert('berhasil')
+      alert('add employee success')
       let ref = document.getElementById('cancel');
       ref?.click();
       this.formValue.reset();
       this.getEmpData();
       },
       error => {
-        alert('gagal')
+        alert('something wrong!!')
       } 
     )
   }
@@ -64,4 +68,5 @@ export class EmpListComponent implements OnInit {
       this.getEmpDataFull = res;
     })
   }
+
 }

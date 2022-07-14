@@ -1,3 +1,4 @@
+import { EmpDetailComponent } from './emp-detail/emp-detail.component';
 import { SignupComponent } from './signup/signup.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -16,6 +17,9 @@ const routes: Routes = [
   },
   {
     path:'employee-list', component: EmpListComponent
+  },
+  {
+    path:'employee-detail/:dataId', component: EmpDetailComponent
   }
 
 ];
